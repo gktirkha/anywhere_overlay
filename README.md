@@ -44,7 +44,6 @@ class HomeWidget extends StatelessWidget {
           onPressed: () {
             // Method To show Overlay
             AnyWhereOverlay.show(
-              barrierDismissible: true,
               child: Container(
                 height: 100,
                 width: 100,
@@ -129,8 +128,17 @@ Package Offers Three Configurations
       @override
       Widget build(BuildContext context) {
         return MaterialApp(
-          home: const HomeWidget(),
-          builder: AnyWhereOverlay.init(),
+          home: const Scaffold(
+            body: Center(
+              child: Text('Hello World!'),
+            ),
+          ),
+          // Styling During initialization
+          builder: AnyWhereOverlay.init(
+            alignment: Alignment.bottomCenter,
+            animationDuration: const Duration(seconds: 1),
+            overlayBgColor: Colors.blue.withOpacity(.7),
+          ),
         );
       }
     }
@@ -240,27 +248,35 @@ Package Offers Three Configurations
 ### 1. *barrierDismissible* in show method *(default false)*
 if set to true, user can dismiss the overlay by tapping the Outside the top widget
 
-  ```dart
-  AnyWhereOverlay.show(
-                barrierDismissible: true,
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(.5),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const CircularProgressIndicator(strokeWidth: 2),
+```dart
+AnyWhereOverlay.show(
+              barrierDismissible: true,
+              child: Container(
+                height: 100,
+                width: 100,
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(.5),
+                  borderRadius: BorderRadius.circular(12),
                 ),
-              )
+                child: const CircularProgressIndicator(strokeWidth: 2),
+              ),
+            )
   ```
 
-### 2. *showAnimation* in dismiss dismiss method *(default true)*
-sets weather to show closing animation on dismiss method, if set to false, overlay will close immediately, without any animation
+> barrierDismissible arguments is not static, one must set this explicitly every time
 
+### 2. *builder* in dismiss init method *(default null)*
+there may be times when you need to use custom builder in material app, no need to worry, you can pass builder in init method, Packages. Package will wrap builder's child with Overlay entry, and you can still use your builder
+
+Implementation in code (init method)
   ```dart
-  AnyWhereOverlay.dismiss(showAnimation: false);
+static TransitionBuilder init({TransitionBuilder? builder}) {
+    return (context, child) => builder != null
+        ? builder(
+            context,
+            AnywhereOverlayWrapper(child: child),
+          )
+        : AnywhereOverlayWrapper(child: child);
+  }
   ```
-
-> showAnimation and barrierDismissible arguments are not static, one must set these explicitly every time

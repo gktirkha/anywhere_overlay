@@ -1,6 +1,6 @@
 name: anywhere_overlay
 description: "A Plugin To Show Overlay Anywhere"
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/gktirkha/anywhere_overlay
 
 environment:

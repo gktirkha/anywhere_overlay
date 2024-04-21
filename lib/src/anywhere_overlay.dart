@@ -21,7 +21,6 @@ class AnyWhereOverlay {
   late AlignmentGeometry alignment;
 
   GlobalKey<AnywhereOverlayBaseState>? _key;
-  GlobalKey<AnywhereOverlayBaseState>? get key => _key;
 
   static TransitionBuilder init({
     TransitionBuilder? builder,
@@ -46,13 +45,15 @@ class AnyWhereOverlay {
           );
   }
 
-  static Future<void> dismiss({bool showAnimation = true}) {
-    return _instance._dismiss(showAnimation);
+  static Future<void> dismiss() {
+    return _instance._dismiss(_instance.topOverlayWidget == null);
   }
 
   Future<void> _dismiss(bool showAnimation) async {
     if (_key != null && _key?.currentState == null) {
-      _resetTopOverlay();
+      _key?.currentState?.hide(showAnimation).whenComplete(() {
+        _resetTopOverlay();
+      });
       return;
     }
 
