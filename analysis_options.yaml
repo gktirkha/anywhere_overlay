@@ -1,0 +1,8 @@
+include: package:flutter_lints/flutter.yaml
+linter:
+  rules:
+    - prefer_relative_imports
+    - exhaustive_cases
+    - avoid_redundant_argument_values 
+    - sort_child_properties_last
+    - sort_constructors_first
