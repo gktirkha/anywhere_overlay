@@ -6,7 +6,7 @@ To use this package, add `anywhere_overlay` as a dependency in your `pubspec.yam
 
 ```yaml
 dependencies:
-  anywhere_overlay: ^1.0.0
+  anywhere_overlay: ^latestVersion
 ```
 
 ## Import
