@@ -1,6 +1,6 @@
 name: anywhere_overlay
-description: "A Plugin To Show Overlay Anywhere"
-version: 1.0.2
+description: "Anywhere Overlay: A Flutter package for customizable overlays anywhere on Android, iOS, Linux, macOS, web, and Windows."
+version: 1.0.3
 repository: https://github.com/gktirkha/anywhere_overlay
 
 environment:

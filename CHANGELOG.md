@@ -11,3 +11,8 @@ Initial Release
 ## 1.0.2
 
 1. Documentation Update
+
+## 1.0.3
+
+1. Added DartDoc
+1. Added Argument to dismiss overlay without animation
