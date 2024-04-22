@@ -6,3 +6,5 @@ linter:
     - avoid_redundant_argument_values 
     - sort_child_properties_last
     - sort_constructors_first
+    # - package_api_docs
+    # - public_member_api_docs
