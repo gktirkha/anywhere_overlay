@@ -1,6 +1,8 @@
 # AnywhereOverlay
 `anywhere_overlay` is a Flutter package that provides a simple and flexible way to show overlays anywhere in your app's UI.
 
+> If you prefer, You may find the dart-doc version of the documentation [here](https://gktirkha.github.io/flutter_packages_doc/anywhere_overlay/)
+
 ## Getting Started
 To use this package, add `anywhere_overlay` as a dependency in your `pubspec.yaml` file.
 
@@ -280,3 +282,9 @@ static TransitionBuilder init({TransitionBuilder? builder}) {
         : AnywhereOverlayWrapper(child: child);
   }
   ```
+
+# Contributions
+Contributions are welcome! Please submit issues and pull requests on the [GitHub repository.](https://github.com/gktirkha/anywhere_overlay)
+
+# License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
