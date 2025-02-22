@@ -19,3 +19,6 @@ Initial Release
 
 ## 1.0.4
 Updated License Year
+
+## 1.0.5
+Updated License Year
