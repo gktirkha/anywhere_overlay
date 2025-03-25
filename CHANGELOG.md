@@ -25,3 +25,6 @@ Updated License Year
 
 ## 1.0.6
 Updated License 
+
+## 1.0.7
+Removed Deprecated Member Use

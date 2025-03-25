@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
         // Configuring Overlay Properties
         animationDuration: const Duration(milliseconds: 150),
         alignment: Alignment.bottomCenter,
-        overlayBgColor: Colors.blue.withOpacity(.70),
+        overlayBgColor: Colors.blue.withAlpha(70),
       ),
     );
   }
@@ -46,7 +46,7 @@ class HomeWidget extends StatelessWidget {
 
                 // Changing Properties using configure method
                 AnyWhereOverlay.configure(
-                  overlayBgColor: Colors.pink.withOpacity(.70),
+                  overlayBgColor: Colors.pink.withAlpha(70),
                   alignment: Alignment.center,
                 );
                 AnyWhereOverlay.show(child: const LoadingWidget());
@@ -59,7 +59,7 @@ class HomeWidget extends StatelessWidget {
 
                     // changing property using instance
                     AnyWhereOverlay.instance.overlayBgColor =
-                        Colors.deepPurple.withOpacity(.7);
+                        Colors.deepPurple.withAlpha(70);
                     AnyWhereOverlay.instance.alignment = Alignment.topCenter;
 
                     // Making Overlay dismissible
@@ -74,7 +74,7 @@ class HomeWidget extends StatelessWidget {
                           // Configuring Overlay Properties
                           animationDuration: const Duration(milliseconds: 150),
                           alignment: Alignment.bottomCenter,
-                          overlayBgColor: Colors.blue.withOpacity(.70),
+                          overlayBgColor: Colors.blue.withAlpha(70),
                         );
                       },
                     );
@@ -100,7 +100,7 @@ class LoadingWidget extends StatelessWidget {
       width: 100,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(.5),
+        color: Colors.white.withAlpha(50),
         borderRadius: BorderRadius.circular(12),
       ),
       child: const CircularProgressIndicator(strokeWidth: 2),

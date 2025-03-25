@@ -54,7 +54,7 @@ class AnyWhereOverlay {
   }) {
     configure(
       animationDuration: animationDuration,
-      overlayBgColor: overlayBgColor ?? Colors.black.withOpacity(.70),
+      overlayBgColor: overlayBgColor ?? Colors.black.withAlpha(70),
       alignment: alignment,
     );
     return (context, child) => builder != null
