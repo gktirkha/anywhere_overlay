@@ -28,3 +28,6 @@ Updated License
 
 ## 1.0.7
 Removed Deprecated Member Use
+
+## 1.0.8
+Update Readme
