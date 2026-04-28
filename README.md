@@ -285,6 +285,3 @@ static TransitionBuilder init({TransitionBuilder? builder}) {
 
 # Contributions
 Contributions are welcome! Please submit issues and pull requests on the [GitHub repository.](https://github.com/gktirkha/anywhere_overlay)
-
-# License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
