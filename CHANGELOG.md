@@ -35,5 +35,5 @@ Update Readme
 ## 1.0.9
 Update Readme
 
-## 1.0.10
+## 2.0.0
 Update Readme
